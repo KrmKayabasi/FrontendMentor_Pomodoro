@@ -133,7 +133,7 @@ body{
 
 .main-wrapper .progress-bar .controls{
     position: absolute;
-    top: 130px;
+    top: 150px;
     display: flex;
     justify-content: center;
     flex-direction: column;
