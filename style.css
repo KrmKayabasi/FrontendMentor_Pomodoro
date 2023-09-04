@@ -169,6 +169,9 @@ body{
 
 
 @media screen and (max-width: 200px) {
+     body{
+       background-color:blue;
+    }
     .outer{
       height: 330px;
       width: 330px;
