@@ -44,26 +44,7 @@ body{
     align-items: center;
 }
 
-@media screen and (max-width: 300px) {
-    .outer{
-      height: 330px;
-      width: 330px;
-    }
-    .progress-bar{
-        height: 290px;
-        width: 290px;
-    }
-    .inner{
-        height: 250px;
-        width: 250px;
-    }
-    .controls{
-         top: 130px;
-    }
-    #time{
-         font-size:2rem;
-}
-  }
+
 
 .main-wrapper .title{
     font-family: var(--font);
@@ -185,3 +166,25 @@ body{
     border: none;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 200px) {
+    .outer{
+      height: 330px;
+      width: 330px;
+    }
+    .progress-bar{
+        height: 290px;
+        width: 290px;
+    }
+    .inner{
+        height: 250px;
+        width: 250px;
+    }
+    .controls{
+         top: 130px;
+    }
+    #time{
+         font-size:2rem;
+}
+  }
