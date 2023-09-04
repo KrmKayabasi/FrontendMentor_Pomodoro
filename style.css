@@ -44,7 +44,39 @@ body{
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
 
+    .progress-bar{
+        max-height: 280px !important;
+        max-width: 280px !important;
+        height: 280px !important;
+        width: 280px !important;
+    }
+    .outer{
+        max-height: 320px !important;
+        max-width: 320px !important;
+        height: 320px !important;
+        width: 320px !important;
+    }
+
+    .inner{
+        max-height: 240px !important;
+        max-width: 240px !important;
+        height: 240px !important;
+        width: 240px !important;
+    }
+
+    body{
+
+        background-color: var(--primary-color) !important;
+    }
+    #time{
+        font-size: 3rem !important;
+    }
+    .controls{
+        top: 110px !important;
+    }
+  }
 
 .main-wrapper .title{
     font-family: var(--font);
@@ -97,6 +129,7 @@ body{
 .main-wrapper .progress-bar{
     width: 390px;
     height: 390px;
+    max-width: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +147,7 @@ body{
     position: absolute;
     top: 20px;
     left: 20px;
+    max-width: 350px;
     border-radius: 50%;
     background-color: var(--primary-dark);
 }
@@ -154,6 +188,7 @@ body{
     border-radius: 50%;
     background: linear-gradient(-40deg, #2e325a 0%, #161932 80%);
     box-shadow: 20px 20px 20px #161932, -20px -20px 20px #2e325a;
+    max-width: 430px;
 }
 
 .settings{
@@ -166,28 +201,3 @@ body{
     border: none;
     cursor: pointer;
 }
-
-
-@media screen and (max-width: 100px) {
-     body{
-       background-color:blue;
-    }
-    .outer{
-      height: 330px;
-      width: 330px;
-    }
-    .progress-bar{
-        height: 290px;
-        width: 290px;
-    }
-    .inner{
-        height: 250px;
-        width: 250px;
-    }
-    .controls{
-         top: 130px;
-    }
-    #time{
-         font-size:2rem;
-}
-  }
