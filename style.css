@@ -8,7 +8,15 @@
     --theme-color-red: #f87070;
     --theme-color-purple: #d881f8;
     --theme-color-blue: #70f3f8;
+    --font-Kumbh : 'Kumbh Sans';
+    --font-Space-Mono:'Space Mono';
+    --font-Roboto:'Roboto Slav';
+    /* You can change theme here.*/
     --theme-color:var(--theme-color-red);
+    /* You can change font family here.*/
+    --font:var(--font-Space-Mono);
+
+    
 
 }
 *{
@@ -52,7 +60,7 @@ body{
   }
 
 .main-wrapper .title{
-    font-family: 'Kumbh Sans';
+    font-family: var(--font);
     color: var(--secondary-color);
     margin-bottom: 50px;
     font-weight: 400;
@@ -75,7 +83,7 @@ body{
 .main-wrapper .mode-select ul li{
     font-weight: 100;
     padding: 10px 15px;
-    font-family: 'Kumbh Sans';
+    font-family: var(--font);
     font-weight: 100;
     display: inline-flex;
     align-items: center;
@@ -132,7 +140,7 @@ body{
 }
 
 .controls #time{
-    font-family: 'Kumbh Sans';
+    font-family: var(--font);
     font-weight: 700;
     font-size: 5rem;
     color: white;
@@ -147,7 +155,7 @@ body{
     font-weight: 200;
     border: none;
     text-transform: uppercase;
-    font-family: 'Kumbh Sans';
+    font-family: var(--font);
     cursor: pointer;
 }
 
