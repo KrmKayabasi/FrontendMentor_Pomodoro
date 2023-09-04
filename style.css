@@ -44,7 +44,7 @@ body{
     align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     .outer{
       height: 330px;
       width: 330px;
