@@ -133,7 +133,7 @@ body{
 
 .main-wrapper .progress-bar .controls{
     position: absolute;
-    top: 150px;
+    top: 130px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -142,7 +142,7 @@ body{
 .controls #time{
     font-family: var(--font);
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 4.5rem;
     color: white;
     margin-bottom: 20px;
 }
