@@ -1,8 +1,5 @@
 @import url('font.css');
 
-
-
-
 :root{
     --primary-color: rgb(30, 35, 64);
     --primary-dark: #161932;
@@ -11,7 +8,7 @@
     --theme-color-red: #f87070;
     --theme-color-purple: #d881f8;
     --theme-color-blue: #70f3f8;
-    --theme-color:var(--theme-color-purple);
+    --theme-color:var(--theme-color-red);
 
 }
 *{
@@ -24,7 +21,6 @@
 
 html,body{
     height: 100%;
-
 }
 
 body{
@@ -35,10 +31,9 @@ body{
 }
 
 .main-wrapper{
-display: flex;
-flex-direction: column;
-align-items: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -49,7 +44,6 @@ align-items: center;
     .progress-bar{
         height: 350px;
         width: 375px;
-
     }
     .inner{
         height: 310px;
@@ -76,9 +70,7 @@ align-items: center;
     display: flex;
     align-items: center;
     gap: 0.3rem;
-
 }
-
 
 .main-wrapper .mode-select ul li{
     font-weight: 100;
@@ -90,10 +82,7 @@ align-items: center;
     justify-content: center;
     transition: 0.1s;
     cursor: pointer;
-
-
     border-radius: 20px;
-    
 }
 
 .main-wrapper .mode-select ul .selected{
@@ -121,8 +110,7 @@ align-items: center;
     position: absolute;
     top: 20px;
     left: 20px;
-    
-    transition: 0.1s background-image;
+    transition: 0.1s background;
 }
 
 .main-wrapper .progress-bar .inner{
@@ -134,14 +122,13 @@ align-items: center;
     border-radius: 50%;
     background-color: var(--primary-dark);
 }
+
 .main-wrapper .progress-bar .controls{
     position: absolute;
     top: 150px;
-   
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .controls #time{
@@ -162,7 +149,6 @@ align-items: center;
     text-transform: uppercase;
     font-family: 'Kumbh Sans';
     cursor: pointer;
-    
 }
 
 .outer{
@@ -171,7 +157,6 @@ align-items: center;
     position: relative;
     background-color: var(--primary-dark);
     border-radius: 50%;
-    
     background: linear-gradient(-40deg, #2e325a 0%, #161932 80%);
     box-shadow: 20px 20px 20px #161932, -20px -20px 20px #2e325a;
 }
@@ -185,5 +170,4 @@ align-items: center;
     background:none ;
     border: none;
     cursor: pointer;
-
 }
