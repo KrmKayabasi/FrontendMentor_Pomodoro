@@ -15,9 +15,6 @@
     --theme-color:var(--theme-color-red);
     /* You can change font family here.*/
     --font:var(--font-Kumbh);
-
-    
-
 }
 *{
     margin: 0;
@@ -200,4 +197,5 @@ body{
     background:none ;
     border: none;
     cursor: pointer;
+    outline: none;
 }
