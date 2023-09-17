@@ -216,9 +216,20 @@ function set_timer(a,type){
     
     if (a.includes('up')){
         let text = document.getElementById(type)
-        let temporary_text = (parseInt(text.textContent) + 1).toString()
-        console.log(temporary_text)
-        text.innerHTML = temporary_text
+        if (parseInt(text.textContent) == 60){
+            let temporary_text ="60"
+            text.innerHTML = temporary_text
+        }
+        else{
+            
+            let temporary_text = (parseInt(text.textContent) + 1).toString()
+            text.innerHTML = temporary_text
+        }
+
+
+        
+        
+
 
         if (a.includes('pomodoro')){
             temporary_pomodoro = parseInt(temporary_text)
@@ -233,8 +244,18 @@ function set_timer(a,type){
     }
     else{
         let text = document.getElementById(type)
-        let temporary_text = (parseInt(text.textContent) - 1).toString()
-        text.innerHTML = temporary_text
+        if (parseInt(text.textContent) == 1){
+            temporary_text="1"
+            text.innerHTML = temporary_text
+        }
+        else{
+            
+            let temporary_text = (parseInt(text.textContent) - 1).toString()
+            text.innerHTML = temporary_text
+        }
+
+
+  
         console.log(temporary_text)
         if (a.includes('pomodoro')){
             temporary_pomodoro = parseInt(temporary_text)
