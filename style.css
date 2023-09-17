@@ -88,11 +88,11 @@ body{
         font-size: 1.5rem !important;
     }
     .setting-menu{
-        max-width: 400px !important;
+        max-width: 350px !important;
         min-height: 600px !important;
     }
     #apply{
-        left: 127px !important;
+        left: 107px !important;
         top: 0px !important;
     }
     .setting-font-change{
@@ -129,6 +129,7 @@ body{
 
     .setting-time h6{
         margin-bottom: 5px !important;
+        font-size:0.9rem !important
     }
     .setting-time-set{
         flex-direction: column;
