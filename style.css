@@ -155,7 +155,7 @@ body{
   }
 
 .main-wrapper .title{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--secondary-color);
     margin-bottom: 50px;
     font-weight: 400;
@@ -329,7 +329,7 @@ body{
 }
 
 .setting-menu-header h4{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--primary-color);
     font-size: 1.75rem;
 }
@@ -339,7 +339,7 @@ body{
     border-bottom: solid 1px rgba(0, 0, 0, 0.4);
 }
 .setting-time h6{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--primary-color);
     font-size: 1rem;
     margin-bottom: 20px;
@@ -353,7 +353,7 @@ body{
     justify-content: space-between;
 }
 .setting-font-change h6{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--primary-color);
     font-size: 1rem;
     
@@ -370,7 +370,7 @@ body{
 
 .time-set .name{
     
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--third-color);
     font-size: 0.75rem;
     margin-bottom: 7px;
@@ -389,7 +389,7 @@ body{
 }
 
 .time-set span p{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--primary-dark);
 }
 .arrows button{
@@ -411,7 +411,7 @@ body{
 
 
 .fonts form label{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -476,7 +476,7 @@ body{
 }
 
 .colors form label{
-    font-family: var(--font);
+    
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -506,7 +506,7 @@ body{
     justify-content: space-between;
 }
 .setting-color-change h6{
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     color: var(--primary-color);
     font-size: 1rem;
     
@@ -552,7 +552,7 @@ body{
     color: white;
     
     cursor: pointer;
-    font-family: var(--font);
+    font-family: var(--font-Kumbh-Sans);
     border-radius: 30px;
     padding: 20px 45px;
     width: 150px;
