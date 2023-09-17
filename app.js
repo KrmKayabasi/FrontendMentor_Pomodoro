@@ -247,25 +247,35 @@ function set_timer(a,type){
         if (parseInt(text.textContent) == 1){
             temporary_text="1"
             text.innerHTML = temporary_text
+            if (a.includes('pomodoro')){
+                temporary_pomodoro = parseInt(temporary_text)
+            }
+            if (a.includes('short')){
+                temporary_short = parseInt(temporary_text)
+            }
+            else{
+                temporary_long = parseInt(temporary_text)
+            }
         }
         else{
             
             let temporary_text = (parseInt(text.textContent) - 1).toString()
             text.innerHTML = temporary_text
+            if (a.includes('pomodoro')){
+                temporary_pomodoro = parseInt(temporary_text)
+            }
+            if (a.includes('short')){
+                temporary_short = parseInt(temporary_text)
+            }
+            else{
+                temporary_long = parseInt(temporary_text)
+            }
         }
 
 
   
-        console.log(temporary_text)
-        if (a.includes('pomodoro')){
-            temporary_pomodoro = parseInt(temporary_text)
-        }
-        if (a.includes('short')){
-            temporary_short = parseInt(temporary_text)
-        }
-        else{
-            temporary_long = parseInt(temporary_text)
-        }
+        
+
     }
     
     
