@@ -11,8 +11,4 @@ You can try the challenge yourself --> [FrontendMentor_Tracking Intro Component]
 
 Live Demo is available --> [Demo](https://splendorous-sfogliatella-e68162.netlify.app/)
 
-Note1: This project doesn't support mobile view.
-
-Note2: This project is not fully functional. FontChange,ThemeChange and MinuteChange is not available. I will add these features as soon as possible. But you can change values on code and use it on your own computer for a while.
-
-Note3: It doesn't work on the background. I will solve this issue too. 
+Note: It doesn't work on the background. I will solve this issue. 
