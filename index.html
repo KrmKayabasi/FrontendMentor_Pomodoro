@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,23 +13,130 @@
             <ul>
                 <li class="mode-selection selected"><a href="#">pomodoro</a></li>
                 <li class="mode-selection"><a href="#">short break</a></li>
-                <li class="mode-selection"><a  href="#">long break</a></li>
+                <li class="mode-selection"><a href="#">long break</a></li>
             </ul>
         </div>
         <div class="outer">
             <div class="progress-bar">
                 <div class="inner"></div>
                 <div class="controls">
-                    <div id="time">1:00</div>
+                    <div id="time">50:00</div>
                     <button id="startstop">Start</button>
                 </div>
             </div>
         </div>
         
-        <div class="settings" >
-            <button><img src="assets/icon-settings.svg" alt=""></button>
+        <div class="settings">
+            <button id="setting-button"><img src="assets/icon-settings.svg" alt=""></button>
         </div>
-
+        
+        <div class="setting-popup hidden">
+            <div class="setting-menu">
+                <div class="setting-menu-header">
+                    <h4>Setting</h4>
+                    <button id="setting-close">
+                        <img src="assets/icon-close.svg" alt="">
+                    </button>
+                </div>
+                <div class="setting_rest">
+                    <div class="setting-time">
+                        <h6>TIME (MINUTES)</h6>
+                        <div class="setting-time-set">
+                            <div class="time-set">
+                                <p class="name">pomodoro</p>
+                                <span>
+                                    <p id="pomodoro-value">50</p>
+                                    <div class="arrows">
+                                        <button id="pomodoro-up">
+                                            <img src="assets/icon-arrow-up.svg" alt="">
+                                        </button>
+                                        <button id="pomodoro-down">
+                                            <img src="assets/icon-arrow-down.svg" alt="">
+                                        </button>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="time-set">
+                                <p class="name">short break</p>
+                                <span>
+                                    <p id="short-value">5</p>
+                                    <div class="arrows">
+                                        <button id="short-up">
+                                            <img src="assets/icon-arrow-up.svg" alt="">
+                                        </button>
+                                        <button id="short-down">
+                                            <img src="assets/icon-arrow-down.svg" alt="">
+                                        </button>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="time-set">
+                                <p class="name">long break</p>
+                                <span>
+                                    <p id="long-value">10</p>
+                                    <div class="arrows">
+                                        <button id="long-up">
+                                            <img src="assets/icon-arrow-up.svg" alt="">
+                                        </button>
+                                        <button id="long-down">
+                                            <img src="assets/icon-arrow-down.svg" alt="">
+                                        </button>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting-font-change">
+                        <h6>FONT</h6>
+                        <div class="fonts">
+                            <form>
+                                <div>
+                                    <input name="foo" type="radio"  id="Roboto-Slav">
+                                    <label id="Roboto" for="Roboto-Slav">Aa</label>
+                                    
+                                </div>
+                                <div>
+                                    <input name="foo" type="radio"  id="Kumbh-Sans" checked>
+                                    <label id="Kumbh" for="Kumbh-Sans">Aa</label>
+                                    
+                                </div>
+                                <div>
+                                    <input name="foo" type="radio"  id="Space-Mono">
+                                    <label id="SpaceMono" for="Space-Mono">Aa</label>
+                                    
+                                </div>
+                            </form>
+    
+                            
+                        </div>
+                    </div>
+                    <div class="setting-color-change">
+                        <h6>COLOR</h6>
+                        <div class="colors">
+                            <form>
+                                <div>
+                                    <input name="foo2" type="radio"  id="color-blue">
+                                    <label id="blue" for="color-blue"></label>
+                                    
+                                </div>
+                                <div>
+                                    <input name="foo2" type="radio" checked  id="color-red">
+                                    <label id="red" for="color-red"></label>
+                                    
+                                </div>
+                                <div>
+                                    <input name="foo2" type="radio"  id="color-purple">
+                                    <label id="purple" for="color-purple"></label>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="apply">Apply</button>
+            </div>
+        </div>
     </div>
 
 

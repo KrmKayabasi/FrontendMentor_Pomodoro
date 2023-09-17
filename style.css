@@ -3,18 +3,22 @@
 :root{
     --primary-color: rgb(30, 35, 64);
     --primary-dark: #161932;
+    --light-gray:rgb(238,241,250);
     --secondary-color: rgb(190, 194, 223);
     --third-color: #636984;
     --theme-color-red: #f87070;
     --theme-color-purple: #d881f8;
     --theme-color-blue: #70f3f8;
-    --font-Kumbh : 'Kumbh Sans';
+    --font-Kumbh-Sans : 'Kumbh Sans';
     --font-Space-Mono:'Space Mono';
-    --font-Roboto:'Roboto Slav';
+    --font-Roboto-Slav:'Roboto Slav';
     /* You can change theme here.*/
     --theme-color:var(--theme-color-red);
     /* You can change font family here.*/
-    --font:var(--font-Kumbh);
+    --font:var(--font-Kumbh-Sans);
+
+    
+
 }
 *{
     margin: 0;
@@ -44,27 +48,23 @@ body{
 @media screen and (max-width: 600px) {
 
     .progress-bar{
-        max-height: 280px !important;
+        max-height: 280px ;
         max-width: 280px !important;
-        height: 280px !important;
-        width: 280px !important;
+
     }
     .outer{
-        max-height: 320px !important;
+        max-height: 320px ;
         max-width: 320px !important;
-        height: 320px !important;
-        width: 320px !important;
+
     }
 
     .inner{
-        max-height: 240px !important;
+        max-height: 240px ;
         max-width: 240px !important;
-        height: 240px !important;
-        width: 240px !important;
+
     }
 
     body{
-
         background-color: var(--primary-color) !important;
     }
     #time{
@@ -72,6 +72,79 @@ body{
     }
     .controls{
         top: 110px !important;
+    }
+
+    .setting_rest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px 0px 20px;
+        position: relative;
+    }
+    .setting-menu-header{
+        padding: 50px 20px 20px 20px !important;
+    }
+    .setting-menu-header h4{
+        font-size: 1.5rem !important;
+    }
+    .setting-menu{
+        max-width: 400px !important;
+        min-height: 600px !important;
+    }
+    #apply{
+        left: 127px !important;
+        top: 0px !important;
+    }
+    .setting-font-change{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px !important;
+    }
+
+    .setting-color-change{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px !important;
+    }
+    .time-set{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+    }
+
+    .setting-time{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        gap: 10px;
+        padding: 20px !important;
+
+    }
+
+    .setting-time h6{
+        margin-bottom: 5px !important;
+    }
+    .setting-time-set{
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        width: 100%;
+        
+    }
+    .setting-color-change .colors form div label{
+        width: 40px;
+        height: 40px;
+    }
+    .setting-font-change .fonts form div label{
+        width: 40px;
+        font-size: 1rem;
+        height: 40px;
     }
   }
 
@@ -149,7 +222,7 @@ body{
     background-color: var(--primary-dark);
 }
 
-.main-wrapper .progress-bar .controls{
+.controls{
     position: absolute;
     top: 150px;
     display: flex;
@@ -193,9 +266,294 @@ body{
     bottom: 15px;
 }
 
+
+
 .settings button{
     background:none ;
     border: none;
     cursor: pointer;
     outline: none;
+}
+.setting-popup{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    opacity: 1;
+    transition: all 0.5s;
+
+}
+
+.setting-menu{
+    background-color: white;
+    border-radius: 20px;
+    height: 500px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.setting-menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 40px 30px 30px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+
+}
+
+.setting-menu-header #setting-close{
+    outline: none;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting-menu-header h4{
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+.setting-time{
+    padding: 30px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+}
+.setting-time h6{
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.15rem;
+}
+.setting-font-change{
+    padding: 30px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.setting-font-change h6{
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 1rem;
+    
+    letter-spacing: 0.15rem;
+}
+
+.setting-time-set{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    
+}
+
+.time-set .name{
+    
+    font-family: var(--font);
+    color: var(--third-color);
+    font-size: 0.75rem;
+    margin-bottom: 7px;
+}
+.time-set span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:var(--primary-dark);
+    padding: 10px;
+    width: 130px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+
+}
+
+.time-set span p{
+    font-family: var(--font);
+    color: var(--primary-dark);
+}
+.arrows button{
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border:none;
+}
+
+.arrows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fonts form input{
+ display: none;
+}
+
+
+.fonts form label{
+    font-family: var(--font);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+    color: var(--primary-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+
+.fonts form div input:checked + label{
+
+    
+    background: var(--primary-dark);
+    color : var(--light-gray);
+   
+    
+
+    
+}
+
+#Roboto{
+    font-family: var(--font-Roboto-Slav);
+    font-weight: 500;
+}
+#Kumbh{
+    font-family: var(--font-Kumbh-Sans);
+    font-weight: 500;
+}
+#SpaceMono{
+    font-family: var(--font-Space-Mono);
+    font-weight: 500;
+}
+.fonts form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.colors form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#blue{
+    background-color: var(--theme-color-blue);
+}
+#red{
+    background-color: var(--theme-color-red);
+}
+#purple{
+    background-color: var(--theme-color-purple);
+}
+
+.colors form input{
+    display: none;
+}
+
+.colors form label{
+    font-family: var(--font);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+    color: var(--primary-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    
+    cursor: pointer;
+    -webkit-transition: all 1.2s ease;
+    -moz-transition: all 1.2s ease;
+    -ms-transition: all 1.2s ease;
+    -o-transition: all 1.2s ease;
+    transition:  all 1.2s ease-out;
+
+}
+
+
+
+.setting-color-change{
+    
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.setting-color-change h6{
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 1rem;
+    
+    letter-spacing: 0.15rem;
+}
+
+.colors form div label::before{
+    content: "";
+    opacity: 0;
+}
+
+.colors form div input:checked + label::before{
+    content: url(assets/tick_symbol.svg);
+    
+    z-index: 100;
+    top: 2px;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 1;
+    position: relative;
+
+    
+    
+   
+    
+
+    
+}
+
+.hidden{
+    display: none;
+    transition: all 0.5s;
+}
+
+
+
+#apply{
+    background-color: var(--theme-color);
+    color: white;
+    
+    cursor: pointer;
+    font-family: var(--font);
+    border-radius: 30px;
+    padding: 20px 45px;
+    width: 150px;
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    top: 10px;
+   
+    left: 200px;
 }

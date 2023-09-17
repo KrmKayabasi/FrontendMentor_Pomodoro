@@ -1,7 +1,10 @@
 let progressBar = document.querySelector(".progress-bar");
+let inner = document.querySelector(".inner");
 let time = document.getElementById('time');
 var alarm = new Audio('assets/Alarm06.wav');
 let start_stop_button = document.getElementById("startstop");
+const root = document.querySelector(':root');
+let temporary_pomodoro,temporary_short,temporary_long
 let interval;
 let progressValue = 0;
 let progressEndValue = 360;
@@ -11,20 +14,57 @@ let long_break = 10
 let modes = document.querySelectorAll(".mode-selection");
 let selected_mode = modes[0]
 let modes_list = [[modes[0],pomodoro],[modes[1],short_break],[modes[2],long_break]]
-console.log(modes)
+let setting_button = document.getElementById('setting-button')
+let close_button = document.getElementById('setting-close')
+let settings = document.querySelector(".setting-popup")
+let pomodoro_up = document.getElementById('pomodoro-up')
+let pomodoro_down = document.getElementById('pomodoro-down')
+let short_up = document.getElementById('short-up')
+let short_down = document.getElementById('short-down')
+let long_up = document.getElementById('long-up')
+let long_down = document.getElementById('long-down')
+let apply_button= document.getElementById('apply')
+pomodoro_up.addEventListener('click',function (){
+    set_timer('pomodoro-up','pomodoro-value')
+})
+pomodoro_down.addEventListener('click',function (){
+    set_timer('pomodoro-down','pomodoro-value')
+})
+short_up.addEventListener('click',function (){
+    set_timer('short-up','short-value')
+})
+short_down.addEventListener('click',function (){
+    set_timer('short-down','short-value')
+})
+long_up.addEventListener('click',function (){
+    set_timer('long-up','long-value')
+})
+long_down.addEventListener('click',function (){
+    set_timer('long-down','long-value')
+})
+
+apply_button.addEventListener('click',function (){
+    apply()
+
+})
+
+
+setting_button.addEventListener('click',open_settings)
+close_button.addEventListener('click',close_settings)
+
 mode_selection();
 reset();
 
-a();
-function a(){
-    start_stop_button.addEventListener('click',start_stop)
-}
+
+
+start_stop_button.addEventListener('click',start_stop)
+
 
 
 function mode_selection(){
     modes.forEach(element => {
         element.addEventListener('click',() => {
-            console.log(element.textContent)
+            
             element.classList.add('selected');
             selected_mode.classList.remove('selected');
             selected_mode = element;
@@ -63,7 +103,7 @@ function set_timer_text(){
     let array = time.textContent.split(':');
     let min =parseInt(array[0]);
     let sec = parseInt(array[1]);
-    
+    console.log(inner.offsetWidth,inner.offsetHeight)
     if(sec==0){
         sec = 59;
         min = min -1;
@@ -94,16 +134,16 @@ function set_timer_text(){
 
 function timer(){
     progressValue++;
-    console.log(progressValue)
+    
     let deg = progressValue * (360/(progressEndValue*40))
     progressBar.style.background = `conic-gradient(
         var(--theme-color) ${deg}deg,
         var(--primary-dark) ${deg}deg
     )`;
-    console.log(deg)
-    console.log(progressEndValue)
+    
+    
     if (progressValue % 40 == 0){
-        console.log(time.textContent)
+        
         set_timer_text();
         
     }
@@ -140,17 +180,17 @@ function start_stop(){
 
         progressEndValue = min*60
         interval = setInterval(timer,25);
-        console.log(progressValue)
+        
     }
     else if(start_stop_button.textContent == 'Stop'){
         start_stop_button.textContent = 'Start';
         clearInterval(interval)
-        console.log(progressValue)
+        
     }
     else if(start_stop_button.textContent == 'Restart'){
         start_stop_button.textContent = 'Stop'
         progressValue = 0;
-        console.log(progressValue)
+        
         interval = setInterval(timer,25);
         
         
@@ -159,4 +199,93 @@ function start_stop(){
 
 }
 
+function open_settings(){
 
+    settings.classList.remove("hidden")
+}
+
+function close_settings(){
+
+    settings.classList.add("hidden")
+}
+
+function set_timer(a,type){
+    
+    if (a.includes('up')){
+        let text = document.getElementById(type)
+        let temporary_text = (parseInt(text.textContent) + 1).toString()
+        console.log(temporary_text)
+        text.innerHTML = temporary_text
+
+        if (a.includes('pomodoro')){
+            temporary_pomodoro = parseInt(temporary_text)
+        }
+        if (a.includes('short')){
+            temporary_short = parseInt(temporary_text)
+        }
+        if(a.includes('long')){
+            temporary_long = parseInt(temporary_text)
+        }
+
+    }
+    else{
+        let text = document.getElementById(type)
+        let temporary_text = (parseInt(text.textContent) - 1).toString()
+        text.innerHTML = temporary_text
+        console.log(temporary_text)
+        if (a.includes('pomodoro')){
+            temporary_pomodoro = parseInt(temporary_text)
+        }
+        if (a.includes('short')){
+            temporary_short = parseInt(temporary_text)
+        }
+        else{
+            temporary_long = parseInt(temporary_text)
+        }
+    }
+    
+    
+
+
+
+}
+
+
+function apply(){
+    getSelectedRadio_Font()
+    getSelectedRadio_Color()
+    root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()}')`)
+    root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()}')`)
+    pomodoro = temporary_pomodoro
+    short_break = temporary_short
+    long_break = temporary_long
+    close_settings()
+    console.log('kapadim')
+    
+    root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()})`)
+    root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()})`)
+    reset()
+}
+
+function getSelectedRadio_Font() {
+    let radioButtons = document.getElementsByName('foo');
+    for (let radio of radioButtons) {
+       if (radio.checked) {
+          let font = radio.getAttribute('id')
+          root.style.setProperty('--font', `var(--font-${font}')`)
+          
+          return font
+       }
+    }
+ }
+
+ function getSelectedRadio_Color() {
+    let radioButtons = document.getElementsByName('foo2');
+    for (let radio of radioButtons) {
+       if (radio.checked) {
+          let color = radio.getAttribute('id')
+         
+          return color
+       }
+    }
+ }
