@@ -85,6 +85,7 @@ function reset(){
         var(--theme-color) ${0}deg,
         var(--primary-dark) ${0}deg
     )`;
+    start_stop_button.innerHTML = 'START'
     progressValue = 0
     clearInterval(interval)
     if (selected_mode.textContent == 'pomodoro'){
