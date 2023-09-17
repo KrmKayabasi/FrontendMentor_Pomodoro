@@ -4,7 +4,10 @@ let time = document.getElementById('time');
 var alarm = new Audio('assets/Alarm06.wav');
 let start_stop_button = document.getElementById("startstop");
 const root = document.querySelector(':root');
-let temporary_pomodoro,temporary_short,temporary_long
+
+let temporary_pomodoro = 50
+let temporary_short = 5
+let temporary_long = 10
 let interval;
 let progressValue = 0;
 let progressEndValue = 360;
@@ -265,6 +268,7 @@ function apply(){
     root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()})`)
     root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()})`)
     reset()
+
 }
 
 function getSelectedRadio_Font() {
@@ -289,3 +293,4 @@ function getSelectedRadio_Font() {
        }
     }
  }
+

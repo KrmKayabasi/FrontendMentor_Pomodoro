@@ -45,6 +45,11 @@ body{
     align-items: center;
 }
 
+.font-difference{
+
+    font-size: 0.1rem;
+}
+
 @media screen and (max-width: 600px) {
 
     .progress-bar{
