@@ -391,9 +391,12 @@ body{
 
 }
 
-.time-set span p{
+.time-set span input{
     font-family: var(--font-Kumbh-Sans);
     color: var(--primary-dark);
+    outline:none;
+    border:none;
+    background:none;
 }
 .arrows button{
     background: none;
