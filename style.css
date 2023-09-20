@@ -280,6 +280,7 @@ body{
     border: none;
     cursor: pointer;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .setting-popup{
     height: 100%;
