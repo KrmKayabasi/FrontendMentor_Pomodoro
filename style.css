@@ -430,13 +430,16 @@ body{
     border-radius: 40px;
     transition: 0.4s;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 
 
 .fonts form div input:checked + label{
 
-    
+    -webkit-tap-highlight-color: transparent;
+
     background: var(--primary-dark);
     color : var(--light-gray);
    
@@ -483,7 +486,8 @@ body{
 }
 
 .colors form label{
-    
+    -webkit-tap-highlight-color: transparent;
+
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -522,12 +526,15 @@ body{
 
 .colors form div label::before{
     content: "";
+     -webkit-tap-highlight-color: transparent;
+
     opacity: 0;
 }
 
 .colors form div input:checked + label::before{
     content: url(assets/tick_symbol.svg);
-    
+    -webkit-tap-highlight-color: transparent;
+
     z-index: 100;
     top: 2px;
 
