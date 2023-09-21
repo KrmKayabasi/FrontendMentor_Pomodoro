@@ -7,7 +7,7 @@ It's a solution of Frontend Mentor Project(Pomodoro)
 
 
 
-You can try the challenge yourself --> [FrontendMentor_Tracking Intro Component](https://www.frontendmentor.io/challenges/pomodoro-app-KBFnycJ6G)
+You can try the challenge yourself --> [FrontendMentor_Pomodoro](https://www.frontendmentor.io/challenges/pomodoro-app-KBFnycJ6G)
 
 Live Demo is available --> [Demo](https://splendorous-sfogliatella-e68162.netlify.app/)
 
