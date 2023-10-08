@@ -12,4 +12,4 @@ You can try the challenge yourself --> [FrontendMentor_Pomodoro](https://www.fro
 Live Demo is available --> [Demo](https://splendorous-sfogliatella-e68162.netlify.app/)
 
 
-Note: It doesn't work on the background. I will solve this issue. 
+Note: It doesn't work on the background.
