@@ -85,7 +85,6 @@ function reset(){
         var(--theme-color) ${0}deg,
         var(--primary-dark) ${0}deg
     )`;
-    
     progressValue = 0
     clearInterval(interval)
     if (selected_mode.textContent == 'pomodoro'){
@@ -160,6 +159,7 @@ function timer(){
         start_stop_button.textContent = 'Restart';
         clearInterval(interval);
         alarm.play();
+        
         reset();
     }
 
@@ -296,7 +296,7 @@ function apply(){
     long_break = temporary_long
     close_settings()
     console.log('kapadim')
-    
+    start_stop_button.textContent = 'Start';
     root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()})`)
     root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()})`)
     reset()
