@@ -214,9 +214,10 @@ function close_settings(){
 }
 
 function set_timer(a,type){
-    
+    let text = document.getElementById(type)
+    let temporary_text = text.innerHTML
     if (a.includes('up')){
-        let text = document.getElementById(type)
+        
         if (parseInt(text.textContent) == 60){
             let temporary_text ="60"
             text.innerHTML = temporary_text
@@ -233,13 +234,16 @@ function set_timer(a,type){
 
 
         if (a.includes('pomodoro')){
-            temporary_pomodoro = parseInt(temporary_text)
+            temporary_pomodoro = parseInt(temporary_text) + 1
+            console.log(temporary_text)
         }
         if (a.includes('short')){
-            temporary_short = parseInt(temporary_text)
+            temporary_short = parseInt(temporary_text) +1
+            console.log(temporary_text)
         }
         if(a.includes('long')){
-            temporary_long = parseInt(temporary_text)
+            temporary_long = parseInt(temporary_text) + 1
+            console.log(temporary_text)
         }
 
     }
@@ -254,7 +258,7 @@ function set_timer(a,type){
             if (a.includes('short')){
                 temporary_short = parseInt(temporary_text)
             }
-            else{
+            if (a.includes('long')){
                 temporary_long = parseInt(temporary_text)
             }
         }
@@ -268,7 +272,7 @@ function set_timer(a,type){
             if (a.includes('short')){
                 temporary_short = parseInt(temporary_text)
             }
-            else{
+            if (a.includes('long')){
                 temporary_long = parseInt(temporary_text)
             }
         }
@@ -292,6 +296,7 @@ function apply(){
     root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()}')`)
     root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()}')`)
     pomodoro = temporary_pomodoro
+    console.log(temporary_pomodoro,temporary_short,temporary_long)
     short_break = temporary_short
     long_break = temporary_long
     close_settings()
