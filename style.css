@@ -37,7 +37,6 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
-    overflow:hidden;
 }
 
 .main-wrapper{
@@ -72,13 +71,15 @@ body{
 
     body{
         background-color: var(--primary-color) !important;
-        overflow:hidden;
     }
     #time{
         font-size: 3rem !important;
     }
     .controls{
         top: 110px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 
     .setting_rest{
@@ -205,9 +206,9 @@ body{
 }
 
 .main-wrapper .progress-bar{
-    width: 390px;
-    height: 390px;
-    max-width: 390px;
+    width: 350px;
+    height: 350px;
+    max-width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,19 +221,19 @@ body{
 }
 
 .main-wrapper .progress-bar .inner{
-    width: 350px;
-    height: 350px;
+    width: 310px;
+    height: 310px;
     position: absolute;
     top: 20px;
     left: 20px;
-    max-width: 350px;
+    max-width: 310px;
     border-radius: 50%;
     background-color: var(--primary-dark);
 }
 
 .controls{
     position: absolute;
-    top: 150px;
+    top: 140px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -259,14 +260,14 @@ body{
 }
 
 .outer{
-    width: 430px;
-    height: 430px;
+    width: 390px;
+    height: 390px;
     position: relative;
     background-color: var(--primary-dark);
     border-radius: 50%;
     background: linear-gradient(-40deg, #2e325a 0%, #161932 80%);
     box-shadow: 20px 20px 20px #161932, -20px -20px 20px #2e325a;
-    max-width: 430px;
+    max-width: 410px;
 }
 
 .settings{
@@ -281,7 +282,6 @@ body{
     border: none;
     cursor: pointer;
     outline: none;
-    -webkit-tap-highlight-color: transparent;
 }
 .setting-popup{
     height: 100%;
@@ -298,8 +298,6 @@ body{
     transition: 0.5s;
     opacity: 1;
     transition: all 0.5s;
-    overflow:hidden;
-    
 
 }
 
@@ -396,14 +394,12 @@ body{
 .time-set span p{
     font-family: var(--font-Kumbh-Sans);
     color: var(--primary-dark);
-    
 }
 .arrows button{
     background: none;
     outline: none;
     cursor: pointer;
     border:none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .arrows{
@@ -430,16 +426,13 @@ body{
     border-radius: 40px;
     transition: 0.4s;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-
 }
 
 
 
 .fonts form div input:checked + label{
 
-    -webkit-tap-highlight-color: transparent;
-
+    
     background: var(--primary-dark);
     color : var(--light-gray);
    
@@ -486,8 +479,7 @@ body{
 }
 
 .colors form label{
-    -webkit-tap-highlight-color: transparent;
-
+    
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -526,15 +518,12 @@ body{
 
 .colors form div label::before{
     content: "";
-     -webkit-tap-highlight-color: transparent;
-
     opacity: 0;
 }
 
 .colors form div input:checked + label::before{
     content: url(assets/tick_symbol.svg);
-    -webkit-tap-highlight-color: transparent;
-
+    
     z-index: 100;
     top: 2px;
 
