@@ -400,7 +400,6 @@ body{
     outline: none;
     cursor: pointer;
     border:none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .arrows{
@@ -446,14 +445,17 @@ body{
 #Roboto{
     font-family: var(--font-Roboto-Slav);
     font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
 }
 #Kumbh{
     font-family: var(--font-Kumbh-Sans);
     font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
 }
 #SpaceMono{
     font-family: var(--font-Space-Mono);
     font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
 }
 .fonts form{
     display: flex;
@@ -468,12 +470,15 @@ body{
 }
 #blue{
     background-color: var(--theme-color-blue);
+    -webkit-tap-highlight-color: transparent;
 }
 #red{
     background-color: var(--theme-color-red);
+    -webkit-tap-highlight-color: transparent;
 }
 #purple{
     background-color: var(--theme-color-purple);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .colors form input{
