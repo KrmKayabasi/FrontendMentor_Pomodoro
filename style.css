@@ -400,12 +400,14 @@ body{
     outline: none;
     cursor: pointer;
     border:none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .arrows{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .fonts form input{
