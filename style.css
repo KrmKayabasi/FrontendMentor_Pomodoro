@@ -189,6 +189,7 @@ body{
     transition: 0.1s;
     cursor: pointer;
     border-radius: 20px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main-wrapper .mode-select ul .selected{
@@ -257,6 +258,7 @@ body{
     text-transform: uppercase;
     font-family: var(--font);
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .outer{
@@ -282,6 +284,7 @@ body{
     border: none;
     cursor: pointer;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .setting-popup{
     height: 100%;
