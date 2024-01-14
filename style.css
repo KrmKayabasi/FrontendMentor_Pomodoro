@@ -51,6 +51,9 @@ body{
     font-size: 0.1rem;
 }
 
+@media only screen
+and (max-width : 320px) 
+
 @media screen and (max-width: 600px) {
 
     .progress-bar{
