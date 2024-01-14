@@ -99,6 +99,8 @@ body{
     .setting-menu{
         max-width: 350px !important;
         min-height: 600px !important;
+        position:absolute;
+        top:40%;
     }
     #apply{
         left: 107px !important;
