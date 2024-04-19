@@ -596,11 +596,11 @@ body{
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    top: 10px;
+    top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 10px;
+    right: 15px;
     cursor: pointer;
 }
 
@@ -623,11 +623,11 @@ body{
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 10px;
+    right: 15px;
     cursor: pointer;
 }
 
