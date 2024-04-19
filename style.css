@@ -607,3 +607,29 @@ body{
     width: 100%;
     -webkit-tap-highlight-color: transparent;
 }
+
+.github{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    cursor: pointer;
+}
+
+.github a img{
+    height: 35px;
+    width: 35px;
+    position: relative;
+    color: #7A819F;
+    cursor: pointer;
+}
