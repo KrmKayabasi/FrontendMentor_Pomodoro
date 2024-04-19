@@ -4,7 +4,7 @@ let time = document.getElementById('time');
 var alarm = new Audio('assets/Alarm06.wav');
 let start_stop_button = document.getElementById("startstop");
 const root = document.querySelector(':root');
-
+let fullscreen = document.getElementById('fullscreen')
 let temporary_pomodoro = 50
 let temporary_short = 5
 let temporary_long = 10
@@ -330,4 +330,29 @@ function getSelectedRadio_Font() {
        }
     }
  }
+
+
+function fullscreen_open(){
+    document.documentElement.requestFullscreen();
+    fullscreen.textContent = 'close_fullscreen';
+ }
+
+ function fullscreen_close(){
+    document.exitFullscreen();
+
+    fullscreen.textContent = 'open_in_full';
+
+ }
+
+ function fullscreen_manager(){
+    if (document.fullscreenElement){
+        fullscreen_close();
+    }
+    if (!document.fullscreenElement){
+        fullscreen_open();
+    }
+
+ }
+
+ fullscreen.addEventListener('click',fullscreen_manager)
 
