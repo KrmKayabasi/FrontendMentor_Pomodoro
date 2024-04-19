@@ -587,8 +587,8 @@ body{
 }
 
 .fullscreen{
-    height: 35px;
-    width: 35px;
+    height: 28px;
+    width: 28px;
     position: absolute;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -596,26 +596,26 @@ body{
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    top: 10px;
+    top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 10px;
+    right: 15px;
     cursor: pointer;
 }
 
 .fullscreen span{
     color: #7A819F;
     position: relative;
-    font-size: 35px;
+    font-size: 28px;
     height: 100%;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
 }
 
 .github{
-    height: 35px;
-    width: 35px;
+    height: 28px;
+    width: 28px;
     position: absolute;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -623,17 +623,17 @@ body{
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    bottom: 20px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 20px;
+    right: 15px;
     cursor: pointer;
 }
 
 .github a img{
-    height: 35px;
-    width: 35px;
+    height: 28px;
+    width: 28px;
     position: relative;
     color: #7A819F;
     cursor: pointer;
