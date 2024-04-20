@@ -5,9 +5,11 @@ var alarm = new Audio('assets/Alarm06.wav');
 let start_stop_button = document.getElementById("startstop");
 const root = document.querySelector(':root');
 let fullscreen = document.getElementById('fullscreen')
+
+
 let temporary_pomodoro = 50
-let temporary_short = 5
-let temporary_long = 10
+let temporary_short = 10
+let temporary_long = 20
 let interval;
 let progressValue = 0;
 let progressEndValue = 360;
@@ -331,16 +333,15 @@ function getSelectedRadio_Font() {
     }
  }
 
-
-function fullscreen_open(){
+ function fullscreen_open(){
     document.documentElement.requestFullscreen();
-    fullscreen.textContent = 'close_fullscreen';
+    fullscreen.querySelector('img').src = 'assets/fullscreen_close.svg'
  }
 
  function fullscreen_close(){
     document.exitFullscreen();
 
-    fullscreen.textContent = 'open_in_full';
+    fullscreen.querySelector('img').src = 'assets/fullscreen_open.svg'
 
  }
 
@@ -354,5 +355,27 @@ function fullscreen_open(){
 
  }
 
- fullscreen.addEventListener('click',fullscreen_manager)
+ fullscreen.addEventListener('click',fullscreen_manager);
 
+
+ document.body.onkeyup = function(e) {
+    if (e.key == " " ||
+        e.code == "Space" ||      
+        e.keyCode == 32      
+    ){
+        console.log('space basidsfd')
+        start_stop();
+        alarm.pause();
+
+    }
+    if (e.key == "r" || e.key == "R" || e.keyCode == 82 || e.keyCode == 114){
+        console.log('R basildi')
+        reset();
+        start_stop_button.textContent = 'Start';
+        alarm.pause();
+    }
+    if (e.key == "f" || e.key == "F" || e.keyCode == 70 || e.keyCode == 102){
+        console.log('F basildi')
+        fullscreen_manager();
+    }
+ }
