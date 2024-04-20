@@ -14,8 +14,8 @@ let interval;
 let progressValue = 0;
 let progressEndValue = 360;
 let pomodoro= 50
-let short_break = 5
-let long_break = 10
+let short_break = 10
+let long_break = 20
 let modes = document.querySelectorAll(".mode-selection");
 let selected_mode = modes[0]
 let modes_list = [[modes[0],pomodoro],[modes[1],short_break],[modes[2],long_break]]
