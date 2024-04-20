@@ -7,8 +7,10 @@
     --secondary-color: rgb(190, 194, 223);
     --third-color: #636984;
     --theme-color-red: #f87070;
-    --theme-color-purple: #d881f8;
-    --theme-color-blue: #70f3f8;
+    --theme-color-green: #0ed800;
+    --theme-color-orange: #dc9c13;
+    --theme-color-gray:#d1b2ba;
+    --theme-color-:#a3042c;
     --font-Kumbh-Sans : 'Kumbh Sans';
     --font-Space-Mono:'Space Mono';
     --font-Roboto-Slav:'Roboto Slav';
@@ -465,19 +467,27 @@ body{
     gap: 15px;
 }
 
+.fonts{
+    margin-right: 25px;
+}
+
 .colors form{
     display: flex;
     align-items: center;
     gap: 15px;
 }
-#blue{
-    background-color: var(--theme-color-blue);
+#orange{
+ 
+    background-color: var(--theme-color-orange);
 }
 #red{
     background-color: var(--theme-color-red);
 }
-#purple{
-    background-color: var(--theme-color-purple);
+#gray{
+    background-color: var(--theme-color-gray);
+}
+#green{
+    background-color: var(--theme-color-green);
 }
 
 .colors form input{
