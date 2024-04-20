@@ -42,7 +42,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
-    overflow:hidden;
+    
 }
 
 .main-wrapper{
@@ -56,8 +56,7 @@ body{
     font-size: 0.1rem;
 }
 
-
-@media screen and (max-width: 600px) and (orientation : portrait) {
+@media screen and (max-width: 600px) {
 
     .progress-bar{
         max-height: 280px ;
@@ -105,8 +104,6 @@ body{
     .setting-menu{
         max-width: 350px !important;
         min-height: 600px !important;
-        position:absolute;
-        top:10%;
     }
     #apply{
         left: 107px !important;
@@ -198,7 +195,6 @@ body{
     transition: 0.1s;
     cursor: pointer;
     border-radius: 20px;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .main-wrapper .mode-select ul .selected{
@@ -267,7 +263,6 @@ body{
     text-transform: uppercase;
     font-family: var(--font);
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .outer{
@@ -293,7 +288,6 @@ body{
     border: none;
     cursor: pointer;
     outline: none;
-    -webkit-tap-highlight-color: transparent;
 }
 .setting-popup{
     height: 100%;
@@ -418,7 +412,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .fonts form input{
@@ -457,17 +450,14 @@ body{
 #Roboto{
     font-family: var(--font-Roboto-Slav);
     font-weight: 500;
-    -webkit-tap-highlight-color: transparent;
 }
 #Kumbh{
     font-family: var(--font-Kumbh-Sans);
     font-weight: 500;
-    -webkit-tap-highlight-color: transparent;
 }
 #SpaceMono{
     font-family: var(--font-Space-Mono);
     font-weight: 500;
-    -webkit-tap-highlight-color: transparent;
 }
 .fonts form{
     display: flex;
@@ -482,15 +472,12 @@ body{
 }
 #blue{
     background-color: var(--theme-color-blue);
-    -webkit-tap-highlight-color: transparent;
 }
 #red{
     background-color: var(--theme-color-red);
-    -webkit-tap-highlight-color: transparent;
 }
 #purple{
     background-color: var(--theme-color-purple);
-    -webkit-tap-highlight-color: transparent;
 }
 
 .colors form input{
@@ -605,24 +592,20 @@ body{
 }
 
 .fullscreen span{
-    color: #7A819F;
+    
     position: relative;
-    font-size: 28px;
     height: 100%;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
 }
+
 
 .github{
     height: 28px;
     width: 28px;
     position: absolute;
     -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
+
     bottom: 15px;
     display: flex;
     justify-content: center;
@@ -637,4 +620,10 @@ body{
     position: relative;
     color: #7A819F;
     cursor: pointer;
+}
+
+.fullscreen_icon{
+    filter: invert(56%) sepia(11%) saturate(858%) hue-rotate(191deg) brightness(89%) contrast(82%);
+    height: 28px;
+    width: 28px;
 }
