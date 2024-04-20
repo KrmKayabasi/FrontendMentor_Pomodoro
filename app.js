@@ -358,7 +358,7 @@ function getSelectedRadio_Font() {
  fullscreen.addEventListener('click',fullscreen_manager);
 
 
- document.body.onkeyup = function(e) {
+ document.body.onkeydown = function(e) {
     if (e.key == " " ||
         e.code == "Space" ||      
         e.keyCode == 32      
