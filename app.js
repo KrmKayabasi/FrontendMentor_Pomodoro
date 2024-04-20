@@ -378,7 +378,7 @@ function getSelectedRadio_Font() {
         console.log('F basildi')
         fullscreen_manager();
     }
-        if ( e.keyCode == 39){
+        if ( e.keyCode === 38){
         console.log('sağ ok basildi')
         console.log(modes)
     }
