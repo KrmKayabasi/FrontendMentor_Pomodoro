@@ -8,14 +8,14 @@ let fullscreen = document.getElementById('fullscreen')
 
 
 let temporary_pomodoro = 50
-let temporary_short = 10
-let temporary_long = 20
+let temporary_short = 20
+let temporary_long = 30
 let interval;
 let progressValue = 0;
 let progressEndValue = 360;
 let pomodoro= 50
-let short_break = 10
-let long_break = 20
+let short_break = 20
+let long_break = 30
 let modes = document.querySelectorAll(".mode-selection");
 let selected_mode = modes[0]
 let modes_list = [[modes[0],pomodoro],[modes[1],short_break],[modes[2],long_break]]
