@@ -439,3 +439,5 @@ let deneme;
 
     }
  }
+
+ navigator.wakeLock.request()
