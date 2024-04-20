@@ -108,7 +108,7 @@ function set_timer_text(){
     let array = time.textContent.split(':');
     let min =parseInt(array[0]);
     let sec = parseInt(array[1]);
-    console.log(inner.offsetWidth,inner.offsetHeight)
+    //console.log(inner.offsetWidth,inner.offsetHeight)
     if(sec==0){
         sec = 59;
         min = min -1;
@@ -237,15 +237,15 @@ function set_timer(a,type){
 
         if (a.includes('pomodoro')){
             temporary_pomodoro = parseInt(temporary_text) + 1
-            console.log(temporary_text)
+            //console.log(temporary_text)
         }
         if (a.includes('short')){
             temporary_short = parseInt(temporary_text) +1
-            console.log(temporary_text)
+            //console.log(temporary_text)
         }
         if(a.includes('long')){
             temporary_long = parseInt(temporary_text) + 1
-            console.log(temporary_text)
+            //console.log(temporary_text)
         }
 
     }
@@ -298,11 +298,11 @@ function apply(){
     root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()}')`)
     root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()}')`)
     pomodoro = temporary_pomodoro
-    console.log(temporary_pomodoro,temporary_short,temporary_long)
+    //console.log(temporary_pomodoro,temporary_short,temporary_long)
     short_break = temporary_short
     long_break = temporary_long
     close_settings()
-    console.log('kapadim')
+    //console.log('kapadim')
     start_stop_button.textContent = 'Start';
     root.style.setProperty('--font', `var(--font-${getSelectedRadio_Font()})`)
     root.style.setProperty('--theme-color', `var(--theme-${getSelectedRadio_Color()})`)
@@ -357,29 +357,85 @@ function getSelectedRadio_Font() {
 
  fullscreen.addEventListener('click',fullscreen_manager);
 
-
- document.body.onkeypress = function(e) {
+let deneme;
+ document.body.onkeyup = function(e) {
     if (e.key == " " ||
         e.code == "Space" ||      
         e.keyCode == 32      
     ){
-        console.log('space basidsfd')
+       
         start_stop();
         alarm.pause();
 
     }
     if (e.key == "r" || e.key == "R" || e.keyCode == 82 || e.keyCode == 114){
-        console.log('R basildi')
+        
         reset();
         start_stop_button.textContent = 'Start';
         alarm.pause();
     }
     if (e.key == "f" || e.key == "F" || e.keyCode == 70 || e.keyCode == 102){
-        console.log('F basildi')
+        
         fullscreen_manager();
     }
-        if ( e.keyCode === 38){
-        console.log('sağ ok basildi')
-        console.log(modes)
+    if ( e.keyCode === 39){
+        let i
+        
+        modes_list.forEach(element => {
+            
+            if (element[0].className.includes("selected")){
+
+                i = modes_list.indexOf(element)
+            }  
+
+        })
+        if (i === 2){
+            i=2
+            
+            selected_mode = modes[i];
+       
+            
+        }
+        else{
+            modes_list[i][0].classList.remove("selected")
+            modes_list[i+1][0].classList.add("selected")
+            i = i + 1
+            
+            selected_mode = modes[i];
+           
+            reset()
+        }
+        
+
+    }
+    if ( e.keyCode === 37){
+        let i
+        
+        modes_list.forEach(element => {
+            
+            if (element[0].className.includes("selected")){
+
+                i = modes_list.indexOf(element)
+            }  
+
+        })
+        if (i === 0){
+            i=0
+
+            selected_mode = modes[i];
+            
+        }
+        else{
+            modes_list[i][0].classList.remove("selected")
+            modes_list[i-1][0].classList.add("selected")
+            i = i - 1
+       
+            selected_mode = modes[i];
+    
+            reset()
+        }
+
+        
+
     }
  }
