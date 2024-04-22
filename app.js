@@ -69,12 +69,20 @@ start_stop_button.addEventListener('click',start_stop)
 function mode_selection(){
     modes.forEach(element => {
         element.addEventListener('click',() => {
+            if(selected_mode == element){
+                selected_mode = element; 
+                start_stop_button.textContent = 'Start';
+                reset(); 
+            }
+            else{
+                element.classList.add('selected');
+                selected_mode.classList.remove('selected');
+                selected_mode = element;
+                start_stop_button.textContent = 'Start';
+                reset();
+            }
             
-            element.classList.add('selected');
-            selected_mode.classList.remove('selected');
-            selected_mode = element;
-            start_stop_button.textContent = 'Start';
-            reset();
+
 
 
         })
