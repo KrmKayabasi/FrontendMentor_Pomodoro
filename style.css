@@ -82,7 +82,9 @@ body{
         background-color: var(--primary-color) !important;
     }
     #time{
+        margin-bottom: 20px !important;
         font-size: 3rem !important;
+        
     }
     .controls{
         top: 110px !important;
@@ -166,6 +168,155 @@ body{
     }
   }
 
+  @media screen and (max-width: 400px) {
+
+ 
+    .progress-bar{
+        max-height: 190px ;
+        max-width: 190px !important;
+        top: 15px !important;
+        left: 15px !important;
+
+    }
+    .outer{
+        max-height: 220px ;
+        max-width: 220px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+    }
+
+    .inner{
+        max-height: 160px ;
+        max-width: 160px !important;
+        top: 15px !important;
+        left: 15px !important;
+
+    }
+
+    body{
+        background-color: var(--primary-color) !important;
+        height: 100%;
+    }
+    #time{
+        font-size: 2rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .main-wrapper .mode-select ul li{
+     
+        padding: 10px 8px !important;
+        font-family: var(--font);
+        font-weight: 100;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.1s;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    .main-wrapper .mode-select ul li a{
+        font-size: 10px !important;
+        
+        
+    }
+    .controls{
+        top: 70px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        
+    }
+
+    .controls #startstop{
+        font-size: 0.7rem !important;
+    }
+
+    .setting_rest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px 0px 20px;
+        position: relative;
+    }
+    .setting-menu-header{
+        padding: 50px 20px 20px 20px !important;
+    }
+    .setting-menu-header h4{
+        font-size: 1.5rem !important;
+    }
+    .setting-menu{
+        max-width: 300px !important;
+        min-height: 600px !important;
+    }
+    #apply{
+        left: 107px !important;
+        top: 0px !important;
+    }
+
+    #startstop{
+        font-size: 1rem;
+    }
+    .setting-font-change{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px !important;
+    }
+
+    .setting-color-change{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px !important;
+    }
+    .time-set{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+    }
+
+    .title{
+        margin-bottom: 30px !important;
+    }
+
+    .setting-time{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        gap: 10px;
+        padding: 20px !important;
+
+    }
+
+    .setting-time h6{
+        margin-bottom: 1px !important;
+        font-size:0.9rem !important
+    }
+    .setting-time-set{
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        width: 100%;
+        
+    }
+    .setting-color-change .colors form div label{
+        width: 40px;
+        height: 40px;
+    }
+    .setting-font-change .fonts form div label{
+        width: 40px;
+        font-size: 1rem;
+        height: 40px;
+    }
+  }
+
 .main-wrapper .title{
     font-family: var(--font-Kumbh-Sans);
     color: var(--secondary-color);
@@ -198,6 +349,13 @@ body{
     transition: 0.1s;
     cursor: pointer;
     border-radius: 20px;
+}
+
+.main-wrapper .mode-select ul li a{
+    text-align: center;
+    transition: 0.1s;
+    cursor: pointer;
+
 }
 
 .main-wrapper .mode-select ul .selected{
@@ -254,6 +412,8 @@ body{
     font-size: 4.5rem;
     color: white;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .controls button{
@@ -272,6 +432,9 @@ body{
     width: 390px;
     height: 390px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--primary-dark);
     border-radius: 50%;
     background: linear-gradient(-40deg, #2e325a 0%, #161932 80%);
@@ -280,8 +443,13 @@ body{
 }
 
 .settings{
-    position: absolute;
     bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
 }
 
 
