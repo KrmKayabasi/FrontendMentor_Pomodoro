@@ -71,14 +71,14 @@ function mode_selection(){
         element.addEventListener('click',() => {
             if(selected_mode == element){
                 selected_mode = element; 
-                start_stop_button.textContent = 'Start';
+                
                 reset(); 
             }
             else{
                 element.classList.add('selected');
                 selected_mode.classList.remove('selected');
                 selected_mode = element;
-                start_stop_button.textContent = 'Start';
+                
                 reset();
             }
             
@@ -97,6 +97,7 @@ function reset(){
     )`;
     progressValue = 0
     clearInterval(interval)
+    start_stop_button.textContent = 'Start';
     if (selected_mode.textContent == 'pomodoro'){
         time.textContent = `${pomodoro}:00`
 
@@ -437,9 +438,10 @@ let deneme;
             modes_list[i][0].classList.remove("selected")
             modes_list[i-1][0].classList.add("selected")
             i = i - 1
+            
        
             selected_mode = modes[i];
-    
+            
             reset()
         }
 
