@@ -232,6 +232,7 @@ body{
 
     .controls #startstop{
         font-size: 0.7rem !important;
+        padding: 1rem !important;
     }
 
     .setting_rest{
