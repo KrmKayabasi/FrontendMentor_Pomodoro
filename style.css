@@ -232,7 +232,6 @@ body{
 
     .controls #startstop{
         font-size: 0.7rem !important;
-        padding: 1rem !important;
     }
 
     .setting_rest{
@@ -412,7 +411,7 @@ body{
     font-weight: 700;
     font-size: 4.5rem;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom:5px;
     display: flex;
     justify-content: center;
 }
@@ -422,6 +421,8 @@ body{
     color: var(--theme-color);
     letter-spacing: 0.5rem;
     font-size: 1rem;
+    padding-top: 15px;
+    padding-bottom:15px;
     font-weight: 200;
     border: none;
     text-transform: uppercase;
